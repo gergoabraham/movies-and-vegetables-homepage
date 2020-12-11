@@ -11,7 +11,7 @@
 .header {
   background-color: var(--background-color-1);
   padding: auto;
-  height: 80vh;
+  height: 100vh;
   max-height: 80vw;
 
   display: flex;

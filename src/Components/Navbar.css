@@ -1,5 +1,38 @@
 .navbar {
+  position: fixed;
+  width: calc(100% - 4rem);
+  height: 3rem;
   display: flex;
   justify-content: space-between;
-  padding: 0.2rem;
+  align-items: center;
+  padding: 0.2rem 2rem;
+
+  background-color: var(--background-color-2);
+}
+
+.navbar button {
+  width: 6rem;
+  height: 1.5rem;
+
+  background: linear-gradient(
+    -45deg,
+    var(--primary-color-a),
+    var(--primary-color-b)
+  );
+  border: 0;
+  border-radius: 0.2rem;
+  box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.25);
+}
+
+.navbar-enter,
+.navbar-exit-active {
+  transform: translateY(-100%);
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.navbar-enter-active {
+  transform: translateY(0);
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
 }

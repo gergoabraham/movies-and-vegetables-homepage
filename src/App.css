@@ -1,8 +1,10 @@
 :root {
   --font-color: #333333;
-  --primary-color-a: rgb(100, 197, 100);
-  --primary-color-b: rgb(206, 155, 62);
+  --primary-color-a: rgb(0, 255, 0);
+  --primary-color-b: rgb(247, 163, 7);
+  --primary-color-c: rgb(214, 63, 176);
   --background-color-1: #f5f5f5;
+  --background-color-2: #e5e5e5;
 }
 
 body {
@@ -12,7 +14,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin: 0;
   font-family: 'Proza Libre', sans-serif;
   font-weight: 600;
