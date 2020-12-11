@@ -1,0 +1,41 @@
+:root {
+  --h1-font-size: 1.5rem;
+}
+
+@media screen and (min-width: 800px) {
+  :root {
+    --h1-font-size: 3rem;
+  }
+}
+
+.header {
+  background-color: var(--background-color-1);
+  padding: auto;
+  height: 80vh;
+  max-height: 80vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header h1 {
+  font-size: var(--h1-font-size);
+}
+
+.header hr {
+  display: block;
+  height: 2px;
+  width: 30rem;
+  max-width: 95%;
+  border: 0;
+  border-radius: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color-a),
+    var(--primary-color-b),
+    var(--primary-color-a)
+  );
+  margin: 0 auto;
+  padding: 0;
+}
