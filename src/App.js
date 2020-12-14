@@ -27,15 +27,11 @@ function App() {
         onChange={(isVisible) => setShowNavbar(!isVisible)}
         partialVisibility={true}
       >
-        <Header />
+        <Header className="light-theme" />
       </VisibilitySensor>
 
-      <Features />
+      <Features className="dark-theme" />
       <Downloads />
-
-      <Header />
-      <Header />
-      <Header />
     </div>
   );
 }

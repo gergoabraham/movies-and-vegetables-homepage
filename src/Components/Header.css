@@ -9,7 +9,6 @@
 }
 
 .header {
-  background-color: var(--background-color-1);
   padding: auto;
   height: 100vh;
   max-height: 80vw;
@@ -30,12 +29,13 @@
   max-width: 95%;
   border: 0;
   border-radius: 1px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     var(--primary-color-a),
     var(--primary-color-b),
     var(--primary-color-a)
-  );
+  ); */
+  background-color: var(--primary-color-a);
   margin: 0 auto;
   padding: 0;
 }

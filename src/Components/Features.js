@@ -1,8 +1,8 @@
 import './Features.css';
 
-function Features() {
+function Features(props) {
   return (
-    <div className="features">
+    <div className={'features ' + props.className}>
       <h2>Features</h2>
       <p>Inserts stuff...</p>
     </div>

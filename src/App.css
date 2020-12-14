@@ -1,14 +1,24 @@
 :root {
-  --font-color: #333333;
-  --primary-color-a: rgb(0, 255, 0);
-  --primary-color-b: rgb(247, 163, 7);
-  --primary-color-c: rgb(214, 63, 176);
-  --background-color-1: #f5f5f5;
-  --background-color-2: #e5e5e5;
+  --background-color-dark: #333333;
+  --font-color-light: #e6aa3b;
+
+  --font-color-dark: #333333;
+  --background-color-light: #fafafa;
+
+  --primary-color-a: rgb(204, 133, 0);
+}
+
+.light-theme {
+  background-color: var(--background-color-light);
+  color: var(--font-color-dark);
+}
+
+.dark-theme {
+  background-color: var(--background-color-dark);
+  color: var(--font-color-light);
 }
 
 body {
-  color: var(--font-color);
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
