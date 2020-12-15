@@ -4,6 +4,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 
 import Navbar from './Components/Navbar';
 import Header from './Components/Header';
+import Introduction from './Components/Introduction';
 import Features from './Components/Features';
 import Downloads from './Components/Downloads';
 
@@ -30,7 +31,8 @@ function App() {
         <Header className="light-theme" />
       </VisibilitySensor>
 
-      <Features className="dark-theme" />
+      <Introduction className="dark-theme" tomColor="red" />
+      <Features className="light-theme" />
       <Downloads />
     </div>
   );
