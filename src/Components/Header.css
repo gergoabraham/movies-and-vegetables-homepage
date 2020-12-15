@@ -30,13 +30,28 @@
   max-width: 95%;
   border: 0;
   border-radius: 1px;
-  /* background: linear-gradient(
-    90deg,
-    var(--primary-color-a),
-    var(--primary-color-b),
-    var(--primary-color-a)
-  ); */
   background-color: var(--primary-color-a);
   margin: 0 auto;
   padding: 0;
+}
+
+.header__logo {
+  width: 250px;
+  height: 200px;
+  position: relative;
+}
+
+.header__logo__tomato {
+  position: absolute;
+  left: 50px;
+}
+
+.header__logo__clapperboard {
+  position: absolute;
+  left: 0px;
+  width: 200px;
+}
+
+.header__logo svg {
+  width: 200px;
 }

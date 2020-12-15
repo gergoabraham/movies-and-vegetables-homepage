@@ -1,8 +1,8 @@
 import Icon from './Icon';
 
-function Tomato({ hover, shadow, style, size, color1, color2 }) {
+function Tomato({ hover, shadow, color1, color2, className }) {
   return (
-    <Icon {...{ hover, shadow, style, size, color1, color2 }}>
+    <Icon {...{ hover, shadow, color1, color2, className }}>
       <path
         fillRule="evenodd"
         fill={color1 || 'rgb(255, 0, 0)'}

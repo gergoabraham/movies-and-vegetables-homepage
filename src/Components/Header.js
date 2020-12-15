@@ -8,19 +8,9 @@ function Header(props) {
 
   return (
     <div className={'header ' + props.className} style={style}>
-      <div style={{ width: '250px', height: '200px', position: 'relative' }}>
-        <Tomato
-          size="200px"
-          hover
-          shadow
-          style={{ position: 'absolute', left: '50px' }}
-        />
-        <Clapperboard
-          size="200px"
-          hover
-          shadow
-          style={{ position: 'absolute' }}
-        />
+      <div className="header__logo">
+        <Tomato hover shadow className="header__logo__tomato" />
+        <Clapperboard hover shadow className="header__logo__clapperboard" />
       </div>
       <h1>Movies and Vegetables</h1>
       <hr />
