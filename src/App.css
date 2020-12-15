@@ -1,6 +1,7 @@
 :root {
   --background-color-dark: #333333;
   --font-color-light: #e6aa3b;
+  --font-color-light-link: #e6aa3b;
 
   --font-color-dark: #333333;
   --background-color-light: #fafafa;
@@ -16,6 +17,10 @@
 .dark-theme {
   background-color: var(--background-color-dark);
   color: var(--font-color-light);
+}
+
+.dark-theme a {
+  color: var(--font-color-light-link);
 }
 
 body {

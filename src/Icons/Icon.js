@@ -1,6 +1,13 @@
 import './Icon.css';
 
-function Icon({ hover, shadow, children, className }) {
+function Icon({
+  hover,
+  shadow,
+  children,
+  className,
+  width = 1200,
+  height = 1200,
+}) {
   return (
     <svg
       className={
@@ -12,7 +19,7 @@ function Icon({ hover, shadow, children, className }) {
       }
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      viewBox="0 0 1200 1200"
+      viewBox={`0 0 ${width} ${height}`}
       width="100px"
     >
       {children}
