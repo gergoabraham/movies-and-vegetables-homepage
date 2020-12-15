@@ -1,8 +1,8 @@
 import './Introduction.css';
 
-function Introduction(props) {
+function Introduction({ className }) {
   return (
-    <div className={'introduction ' + props.className}>
+    <div className={'introduction ' + className}>
       <h2>What is Movies and Vegetables?</h2>
       <p>Inserts stuff...</p>
     </div>
