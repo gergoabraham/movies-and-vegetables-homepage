@@ -1,11 +1,13 @@
 .header {
   --h1-font-size: 1.5rem;
+  --h2-font-size: 1rem;
   --logo-size: 5rem;
 }
 
 @media screen and (min-width: 800px) {
   .header {
     --h1-font-size: 3rem;
+    --h2-font-size: 2rem;
     --logo-size: 10rem;
   }
 }
@@ -16,25 +18,9 @@
   max-height: 80vw;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.header h1 {
-  font-size: var(--h1-font-size);
-}
-
-.header hr {
-  display: block;
-  height: 2px;
-  width: 30rem;
-  max-width: 95%;
-  border: 0;
-  border-radius: 1px;
-  background-color: var(--primary-color-a);
-  margin: 0 auto;
-  padding: 0;
 }
 
 .header__logo {
@@ -56,4 +42,13 @@
 
 .header__logo svg {
   width: var(--logo-size);
+}
+
+.header__title h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--h1-font-size);
+}
+
+.header__title h2 {
+  font-size: var(--h2-font-size);
 }
