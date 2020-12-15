@@ -1,10 +1,12 @@
-:root {
+.header {
   --h1-font-size: 1.5rem;
+  --logo-size: 5rem;
 }
 
 @media screen and (min-width: 800px) {
-  :root {
+  .header {
     --h1-font-size: 3rem;
+    --logo-size: 10rem;
   }
 }
 
@@ -36,22 +38,22 @@
 }
 
 .header__logo {
-  width: 250px;
-  height: 200px;
+  width: calc(var(--logo-size) * 1.25);
+  height: var(--logo-size);
   position: relative;
+  margin: 1rem;
 }
 
 .header__logo__tomato {
   position: absolute;
-  left: 50px;
+  left: calc(var(--logo-size) * 0.25);
 }
 
 .header__logo__clapperboard {
   position: absolute;
-  left: 0px;
-  width: 200px;
+  left: 0;
 }
 
 .header__logo svg {
-  width: 200px;
+  width: var(--logo-size);
 }
