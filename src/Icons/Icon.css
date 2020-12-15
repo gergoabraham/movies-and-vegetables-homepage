@@ -1,0 +1,23 @@
+.icon {
+  --shadow-distance: 2px;
+  --shadow-transparency: 0.5;
+}
+
+.icon .shadow {
+  filter: drop-shadow(
+    var(--shadow-distance) var(--shadow-distance) 5px
+      rgba(0, 0, 0, var(--shadow-transparency))
+  );
+}
+
+.icon .hover {
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+  transition: all 200ms ease;
+}
+
+.icon .hover:hover {
+  --shadow-distance: 10px;
+  --shadow-transparency: 0.2;
+  transform: scale(1.1);
+}
