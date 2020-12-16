@@ -1,0 +1,42 @@
+.float-in {
+  transition-duration: 800ms;
+  transition-timing-function: ease;
+  --transition-delay: 400ms;
+}
+
+.float-in-hidden {
+  opacity: 0;
+  transform: translateY(50%);
+}
+
+.float-in-delay-1 {
+  transition-delay: 0;
+}
+
+.float-in-delay-2 {
+  transition-delay: var(--transition-delay);
+}
+
+.float-in-delay-3 {
+  transition-delay: calc(2 * var(--transition-delay));
+}
+
+.float-in-delay-4 {
+  transition-delay: calc(3 * var(--transition-delay));
+}
+
+.float-in-delay-5 {
+  transition-delay: calc(4 * var(--transition-delay));
+}
+
+.float-in-delay-6 {
+  transition-delay: calc(5 * var(--transition-delay));
+}
+
+.float-in-delay-7 {
+  transition-delay: calc(6 * var(--transition-delay));
+}
+
+.float-in-delay-8 {
+  transition-delay: calc(7 * var(--transition-delay));
+}
