@@ -1,9 +1,9 @@
 import Icon from './Icon';
 
-function Browser({ hover, shadow, color1, color2, className }) {
+function Browser({ hover, shadow, color1, color2, className, ...props }) {
   return (
     <Icon
-      {...{ hover, shadow, color1, color2, className }}
+      {...{ hover, shadow, color1, color2, className, ...props }}
       width="1200"
       height="850"
     >

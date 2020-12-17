@@ -8,27 +8,27 @@ import FloatIn from './FloatIn';
 function Introduction({ className }) {
   return (
     <div className={'introduction ' + className}>
-      <FloatIn order="1">
+      <FloatIn>
         <h2>What is this?</h2>
       </FloatIn>
-      <div className="introduction__list">
-        <FloatIn className="introduction__list__item" order="2">
+      <FloatIn className="introduction__list" startingDelay="1">
+        <div className="introduction__list__item">
           <Browser hover />
           <div>A browser extension</div>
-        </FloatIn>
-        <FloatIn className="introduction__list__item" order="3">
+        </div>
+        <div className="introduction__list__item">
           <Clapperboard hover />
           <div>
             for <a href="https:\\www.imdb.com">IMDb</a>
           </div>
-        </FloatIn>
-        <FloatIn className="introduction__list__item" order="4">
+        </div>
+        <div className="introduction__list__item">
           <Tomato hover />
           <div>
             and <a href="https:\\www.rottentomatoes.com">RottenTomatoes.</a>
           </div>
-        </FloatIn>
-      </div>
+        </div>
+      </FloatIn>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 .float-in {
   transition-duration: 800ms;
   transition-timing-function: ease;
-  --transition-delay: 400ms;
+  --transition-delay: 800ms;
 }
 
 .float-in-hidden {
@@ -9,34 +9,34 @@
   transform: translateY(50%);
 }
 
-.float-in-delay-1 {
+.float-in-delay-0 {
   transition-delay: 0;
 }
 
-.float-in-delay-2 {
-  transition-delay: var(--transition-delay);
+.float-in-delay-1 {
+  transition-delay: calc(1 * var(--transition-delay));
 }
 
-.float-in-delay-3 {
+.float-in-delay-2 {
   transition-delay: calc(2 * var(--transition-delay));
 }
 
-.float-in-delay-4 {
+.float-in-delay-3 {
   transition-delay: calc(3 * var(--transition-delay));
 }
 
-.float-in-delay-5 {
+.float-in-delay-4 {
   transition-delay: calc(4 * var(--transition-delay));
 }
 
-.float-in-delay-6 {
+.float-in-delay-5 {
   transition-delay: calc(5 * var(--transition-delay));
 }
 
-.float-in-delay-7 {
+.float-in-delay-6 {
   transition-delay: calc(6 * var(--transition-delay));
 }
 
-.float-in-delay-8 {
+.float-in-delay-7 {
   transition-delay: calc(7 * var(--transition-delay));
 }

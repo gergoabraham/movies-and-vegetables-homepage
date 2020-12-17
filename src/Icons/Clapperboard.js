@@ -1,8 +1,8 @@
 import Icon from './Icon';
 
-function Clapperboard({ hover, shadow, color1, color2, className }) {
+function Clapperboard({ hover, shadow, color1, color2, className, ...props }) {
   return (
-    <Icon {...{ hover, shadow, color1, color2, className }}>
+    <Icon {...{ hover, shadow, color1, color2, className, ...props }}>
       <path
         fillRule="evenodd"
         fill={color1 || 'rgb(75, 75, 75)'}
