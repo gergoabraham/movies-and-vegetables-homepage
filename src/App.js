@@ -7,6 +7,7 @@ import Header from './Components/MainSections/Header';
 import Introduction from './Components/MainSections/Introduction';
 import Features from './Components/MainSections/Features';
 import Downloads from './Components/MainSections/Downloads';
+import Alert from './Components/MainSections/Alert';
 
 import './App.css';
 
@@ -29,6 +30,11 @@ function App() {
       <VisibilitySensor onChange={showHideNavBar} partialVisibility={true}>
         <Header className="light-theme" />
       </VisibilitySensor>
+
+      <Alert>
+        IMDb is releasing a new version of the Title Page. It is currently
+        unsupported by Movies and Vegetables, but will be soon. Stay tuned. =)
+      </Alert>
 
       <Introduction className="dark-theme" />
       <Features className="light-theme" />
