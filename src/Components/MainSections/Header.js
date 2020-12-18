@@ -2,7 +2,7 @@ import './Header.css';
 
 import Tomato from '../Icons/Tomato';
 import Clapperboard from '../Icons/Clapperboard';
-import FloatIn from './FloatIn';
+import FloatIn from '../FloatInAnimation/FloatIn';
 
 function Header({ className }) {
   return (

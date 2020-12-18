@@ -2,16 +2,18 @@ import { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import VisibilitySensor from 'react-visibility-sensor';
 
-import Navbar from './Components/Navbar';
-import Header from './Components/Header';
-import Introduction from './Components/Introduction';
-import Features from './Components/Features';
-import Downloads from './Components/Downloads';
+import Navbar from './Components/MainSections/Navbar';
+import Header from './Components/MainSections/Header';
+import Introduction from './Components/MainSections/Introduction';
+import Features from './Components/MainSections/Features';
+import Downloads from './Components/MainSections/Downloads';
 
 import './App.css';
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false);
+
+  const showHideNavBar = (isVisible) => setShowNavbar(!isVisible);
 
   return (
     <div className="App">
@@ -24,14 +26,11 @@ function App() {
         <Navbar />
       </CSSTransition>
 
-      <VisibilitySensor
-        onChange={(isVisible) => setShowNavbar(!isVisible)}
-        partialVisibility={true}
-      >
+      <VisibilitySensor onChange={showHideNavBar} partialVisibility={true}>
         <Header className="light-theme" />
       </VisibilitySensor>
 
-      <Introduction className="dark-theme" tomColor="red" />
+      <Introduction className="dark-theme" />
       <Features className="light-theme" />
       <Downloads />
     </div>

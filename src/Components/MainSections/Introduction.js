@@ -3,7 +3,7 @@ import './Introduction.css';
 import Browser from '../Icons/Browser';
 import Clapperboard from '../Icons/Clapperboard';
 import Tomato from '../Icons/Tomato';
-import FloatIn from './FloatIn';
+import FloatIn from '../FloatInAnimation/FloatIn';
 
 function Introduction({ className }) {
   return (
