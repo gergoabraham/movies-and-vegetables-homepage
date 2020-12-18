@@ -2,6 +2,8 @@
   --background-color-dark: #333333;
   --font-color-light: #e6aa3b;
   --font-color-light-link: #e6aa3b;
+  --font-color-light-link-hover: #f8b840;
+  --font-color-light-link-hover-bg: #6b5120;
 
   --font-color-dark: #333333;
   --background-color-light: #fafafa;
@@ -21,6 +23,14 @@
 
 .dark-theme a {
   color: var(--font-color-light-link);
+  border-radius: 0.2rem;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+}
+
+.dark-theme a:hover {
+  color: var(--font-color-light-link-hover);
+  background-color: var(--font-color-light-link-hover-bg);
 }
 
 body {
