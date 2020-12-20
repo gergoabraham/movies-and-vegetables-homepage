@@ -13,17 +13,17 @@ function Introduction({ className }) {
       </FloatIn>
       <FloatIn className="introduction__list" startingDelay="1">
         <div className="introduction__list__item">
-          <Browser hover />
+          <Browser hover shadow />
           <div>A browser extension</div>
         </div>
         <div className="introduction__list__item">
-          <Clapperboard hover />
+          <Clapperboard hover shadow />
           <div>
             for <a href="https:\\www.imdb.com">IMDb</a>
           </div>
         </div>
         <div className="introduction__list__item">
-          <Tomato hover />
+          <Tomato hover shadow />
           <div>
             and <a href="https:\\www.rottentomatoes.com">RottenTomatoes.</a>
           </div>

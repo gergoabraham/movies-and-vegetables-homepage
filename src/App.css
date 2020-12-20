@@ -4,7 +4,8 @@
   --font-color-light: #e6aa3b;
   --font-color-light-link: #e6aa3b;
   --font-color-light-link-hover: #f8b840;
-  --font-color-light-link-hover-bg: #6b5120;
+  --font-color-light-link-hover-bg-1: #6b5120;
+  --font-color-light-link-hover-bg-2: #997025;
 
   --background-color-light-1: #fafafa;
   --background-color-light-2: #e0e0e0;
@@ -34,7 +35,8 @@
 
 .dark-theme a:hover {
   color: var(--font-color-light-link-hover);
-  background-color: var(--font-color-light-link-hover-bg);
+  background-color: var(--font-color-light-link-hover-bg-1);
+  box-shadow: inset 0px 0px 1rem var(--font-color-light-link-hover-bg-2);
 }
 
 body {
