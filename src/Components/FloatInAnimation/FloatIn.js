@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import ReactVisibilitySensor from 'react-visibility-sensor';
 
 import FloatInItem from './FloatInItem';
@@ -12,12 +12,24 @@ function FloatIn({ children, className, startingDelay = 0, customDelays }) {
   }
 
   const [isGroupVisible, setIsGroupVisible] = useState(false);
+  const [doesGroupFitInWindow, setIfGroupFitsInWindow] = useState(false);
+  const sensor = useRef(null);
 
   const visibilityChangeHandler = (isGroupVisible) =>
     isGroupVisible && setIsGroupVisible(true);
 
+  useEffect(() => {
+    setIfGroupFitsInWindow(
+      sensor.current.node.getBoundingClientRect().height > window.innerHeight
+    );
+  }, [setIfGroupFitsInWindow]);
+
   return (
-    <ReactVisibilitySensor onChange={visibilityChangeHandler}>
+    <ReactVisibilitySensor
+      ref={sensor}
+      partialVisibility={doesGroupFitInWindow}
+      onChange={visibilityChangeHandler}
+    >
       <div className={className}>
         {React.Children.map(children, (item, i) => (
           <FloatInItem
