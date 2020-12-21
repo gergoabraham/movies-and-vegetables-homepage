@@ -51,3 +51,13 @@ h3 {
   font-family: 'Proza Libre', sans-serif;
   font-weight: 600;
 }
+
+.section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}

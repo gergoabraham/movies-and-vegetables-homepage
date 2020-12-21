@@ -36,9 +36,9 @@ function App() {
         unsupported by Movies and Vegetables, but will be soon. Stay tuned. =)
       </Alert>
 
-      <Introduction className="dark-theme" />
-      <Features className="light-theme" />
-      <Downloads />
+      <Introduction className="section dark-theme" />
+      <Features className="section light-theme" />
+      <Downloads className="section dark-theme" />
     </div>
   );
 }
