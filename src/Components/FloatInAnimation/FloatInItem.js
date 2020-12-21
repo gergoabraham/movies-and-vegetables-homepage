@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function FloatInItem({ isGroupVisible, children: item, delay }) {
+  const [isTransitionDone, setIsTransitionDone] = useState(false);
+
   const itemOrder = Math.min(parseInt(delay), 7);
 
   const itemProps = {
     className:
       (item.props.className || '') +
-      ` float-in float-in-delay-${itemOrder}` +
+      (!isTransitionDone ? ` float-in float-in-delay-${itemOrder}` : '') +
       (!isGroupVisible ? ' float-in-hidden' : ''),
+    onTransitionEnd: !isTransitionDone ? () => setIsTransitionDone(true) : null,
   };
 
   return React.cloneElement(item, itemProps);
