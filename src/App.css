@@ -27,8 +27,9 @@
 }
 
 .dark-theme a {
+  padding: 0.3rem 0.1rem;
   color: var(--font-color-light-link);
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
   transition-duration: 400ms;
   transition-timing-function: ease;
 }
