@@ -1,0 +1,28 @@
+.image-part-image {
+  position: absolute;
+
+  background-clip: content-box;
+  background-repeat: no-repeat;
+
+  border-radius: 0.4rem;
+
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+}
+
+.fade-in-enter {
+  opacity: 0;
+}
+.fade-in-enter-active {
+  opacity: 1;
+  transition-duration: 1000ms;
+  transition-timing-function: ease;
+}
+.fade-in-exit {
+  opacity: 1;
+}
+.fade-in-exit-active {
+  opacity: 0;
+  transition-duration: 1000ms;
+  transition-timing-function: ease;
+}

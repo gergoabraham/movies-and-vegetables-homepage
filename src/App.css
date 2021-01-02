@@ -61,3 +61,7 @@ h3 {
   font-size: 2rem;
   padding-bottom: 2rem;
 }
+
+.section h3 {
+  padding: 1rem;
+}
