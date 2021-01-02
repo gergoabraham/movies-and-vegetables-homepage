@@ -5,10 +5,9 @@ import './ImagePart.css';
 
 function ImagePart({
   children,
-  image = { name: '', width: 0, height: 0 },
+  image = { url: '', width: 0, height: 0 },
   part = { width: 0, height: 0, top: 0, left: 0 },
 }) {
-  const imagePath = './movies-and-vegetables-homepage/images/';
   const [isHovered, setIsHovered] = useState(false);
 
   const containerStyle = {
@@ -24,7 +23,7 @@ function ImagePart({
     width: `${part.width}px`,
     height: `${part.height}px`,
     backgroundPosition: `${-part.left}px ${-part.top}px`,
-    backgroundImage: `url('${imagePath}${image.name}')`,
+    backgroundImage: `url(${image.url})`,
   };
 
   const hoveredStyle = {
@@ -34,7 +33,7 @@ function ImagePart({
     width: `${image.width}px`,
     height: `${image.height}px`,
     backgroundPosition: '0px 0px',
-    backgroundImage: `url('${imagePath}${image.name}')`,
+    backgroundImage: `url(${image.url})`,
   };
 
   return (
@@ -58,10 +57,10 @@ function ImagePart({
         timeout={1100}
         classNames="fade-in"
       >
-        <div class="image-part-image" style={hoveredStyle}></div>
+        <div className="image-part-image" style={hoveredStyle}></div>
       </CSSTransition>
 
-      <div class="image-part-image" style={style}></div>
+      <div className="image-part-image" style={style}></div>
 
       {children}
     </div>

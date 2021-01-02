@@ -3,9 +3,12 @@ import ImagePart from '../ImagePart/ImagePart';
 
 import './Features.css';
 
+import imdbSample from '../Images/imdb-sample.png';
+import rottenSample from '../Images/rotten-sample.png';
+
 function Features({ className }) {
-  const imdbImage = { name: 'imdb-sample.png', width: 669, height: 801 };
-  const rottenImage = { name: 'rotten-sample.png', width: 524, height: 568 };
+  const imdbImage = { url: imdbSample, width: 669, height: 801 };
+  const rottenImage = { url: rottenSample, width: 524, height: 568 };
 
   return (
     <div className={'features ' + className}>
@@ -14,6 +17,7 @@ function Features({ className }) {
       </FloatIn>
 
       <h3>Shows you the scores.</h3>
+
       <div className="features__pages-container">
         <div className="features__pages-container__page">
           <h3>on IMDb</h3>
