@@ -7,6 +7,7 @@ function ImagePartHighlight({
   parts = [{ top: 0, left: 0, width: 0, height: 0, name: '' }],
 }) {
   const [resizeFactor, setResizeFactor] = useState(1);
+  const [highlightIndex, setHighlightIndex] = useState(0);
 
   useEffect(() => {
     const windowResizeHandler = () => {
@@ -17,6 +18,16 @@ function ImagePartHighlight({
     windowResizeHandler();
     window.addEventListener('resize', windowResizeHandler);
   }, [image.width]);
+
+  useEffect(() => {
+    const increaseHighlightIndex = () => {
+      setHighlightIndex((i) => (i < parts.length - 1 ? i + 1 : 0));
+    };
+
+    setInterval(increaseHighlightIndex, 1500);
+  }, [parts.length]);
+
+  const part = parts[highlightIndex];
 
   return (
     <div style={{ position: 'relative' }}>
@@ -31,10 +42,9 @@ function ImagePartHighlight({
         }}
       ></div>
 
-      {parts.map((part, index) => (
+      {
         <div
           title={part.name}
-          key={index}
           style={{
             position: 'absolute',
 
@@ -53,10 +63,12 @@ function ImagePartHighlight({
               `${-part.left * resizeFactor}px ` +
               `${-part.top * resizeFactor}px`,
 
-            filter: 'brightness(1.5)',
+            filter: 'brightness(1.6)',
+            transitionDuration: '500ms',
+            transitionTimingFunction: 'ease',
           }}
         ></div>
-      ))}
+      }
     </div>
   );
 }

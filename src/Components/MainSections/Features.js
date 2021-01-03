@@ -25,18 +25,18 @@ function Features({ className }) {
             image={imdbImage}
             parts={[
               {
-                width: 174,
-                height: 38,
-                left: 178,
-                top: 596,
-                name: 'Tomatometer',
-              },
-              {
                 width: 94,
                 height: 46,
                 left: 480,
                 top: 48,
                 name: 'Audience Score',
+              },
+              {
+                width: 174,
+                height: 38,
+                left: 178,
+                top: 596,
+                name: 'Tomatometer',
               },
               {
                 width: 630,
@@ -56,18 +56,18 @@ function Features({ className }) {
             image={rottenImage}
             parts={[
               {
-                width: 164,
-                height: 113,
-                left: 268,
-                top: 302,
-                name: 'IMDb Rating',
-              },
-              {
                 width: 124,
                 height: 113,
                 left: 132,
                 top: 302,
                 name: 'Metascore',
+              },
+              {
+                width: 164,
+                height: 113,
+                left: 268,
+                top: 302,
+                name: 'IMDb Rating',
               },
               {
                 width: 490,
