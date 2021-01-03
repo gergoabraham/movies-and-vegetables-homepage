@@ -80,16 +80,6 @@ function Features({ className }) {
           ></ImagePartHighlight>
         </div>
       </div>
-
-      <h3>Leads you to the other site.</h3>
-      <div className="features__pages-container">
-        <div className="features__pages-container__page">
-          <h3>on IMDb</h3>
-        </div>
-        <div className="features__pages-container__page">
-          <h3>on RottenTomatoes</h3>
-        </div>
-      </div>
     </div>
   );
 }
