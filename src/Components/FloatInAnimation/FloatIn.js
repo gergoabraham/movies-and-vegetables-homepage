@@ -18,15 +18,15 @@ function FloatIn({ children, className, startingDelay = 0, customDelays }) {
   const visibilityChangeHandler = (isGroupVisible) =>
     isGroupVisible && setIsGroupVisible(true);
 
-  const windowResizeHandler = () =>
-    setIfGroupFitsInWindow(
-      sensor.current.node.getBoundingClientRect().height > window.innerHeight
-    );
-
   useEffect(() => {
+    const windowResizeHandler = () =>
+      setIfGroupFitsInWindow(
+        sensor.current.node.getBoundingClientRect().height > window.innerHeight
+      );
+
     windowResizeHandler();
     window.addEventListener('resize', windowResizeHandler);
-  }, []);
+  }, [sensor]);
 
   return (
     <ReactVisibilitySensor
