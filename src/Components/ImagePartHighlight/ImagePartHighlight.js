@@ -1,15 +1,29 @@
+import { useState, useEffect } from 'react';
+
 import './ImagePartHighlight.css';
 
 function ImagePartHighlight({
   image = { url: '', width: 0, height: 0 },
   parts = [{ top: 0, left: 0, width: 0, height: 0, name: '' }],
 }) {
+  const [resizeFactor, setResizeFactor] = useState(1);
+
+  useEffect(() => {
+    const windowResizeHandler = () => {
+      const maxWidthPx = Math.min(window.innerWidth * 0.9, image.width);
+      setResizeFactor(maxWidthPx / image.width);
+    };
+
+    windowResizeHandler();
+    window.addEventListener('resize', windowResizeHandler);
+  }, [image.width]);
+
   return (
     <div style={{ position: 'relative' }}>
       <div
         style={{
-          width: `${image.width}px`,
-          height: `${image.height}px`,
+          width: `${image.width * resizeFactor}px`,
+          height: `${image.height * resizeFactor}px`,
           borderRadius: '1rem',
 
           backgroundImage: `url(${image.url})`,
@@ -24,15 +38,20 @@ function ImagePartHighlight({
           style={{
             position: 'absolute',
 
-            top: `${part.top}px`,
-            left: `${part.left}px`,
-            width: `${part.width}px`,
-            height: `${part.height}px`,
+            top: `${part.top * resizeFactor}px`,
+            left: `${part.left * resizeFactor}px`,
+            width: `${part.width * resizeFactor}px`,
+            height: `${part.height * resizeFactor}px`,
 
             borderRadius: '0.5rem',
 
             backgroundImage: `url(${image.url})`,
-            backgroundPosition: `${-part.left}px ${-part.top}px`,
+            backgroundSize:
+              `${image.width * resizeFactor}px ` +
+              `${image.height * resizeFactor}px`,
+            backgroundPosition:
+              `${-part.left * resizeFactor}px ` +
+              `${-part.top * resizeFactor}px`,
 
             filter: 'brightness(1.5)',
           }}
