@@ -1,0 +1,39 @@
+.image-part-highlight-background {
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+
+  background-size: contain;
+  border-radius: 1rem;
+}
+
+.image-part-highlight-background.darkened {
+  filter: brightness(0.6) blur(2px);
+}
+
+.image-part-highlight-highlight {
+  position: absolute;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+}
+
+.image-part-highlight-legend {
+  position: absolute;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+}
+
+.image-part-highlight-legend-text {
+  font-family: 'Proza Libre', sans-serif;
+
+  background-color: white;
+  overflow: hidden;
+  width: fit-content;
+  text-align: center;
+
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 10px auto;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+}
