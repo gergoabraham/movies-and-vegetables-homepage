@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/movies-and-vegetables-homepage/static/css/main.44164620.chunk.css",
-    "main.js": "/movies-and-vegetables-homepage/static/js/main.2eb30f57.chunk.js",
-    "main.js.map": "/movies-and-vegetables-homepage/static/js/main.2eb30f57.chunk.js.map",
+    "main.css": "/movies-and-vegetables-homepage/static/css/main.1f98c93d.chunk.css",
+    "main.js": "/movies-and-vegetables-homepage/static/js/main.fb0c30e2.chunk.js",
+    "main.js.map": "/movies-and-vegetables-homepage/static/js/main.fb0c30e2.chunk.js.map",
     "runtime-main.js": "/movies-and-vegetables-homepage/static/js/runtime-main.668dfbe0.js",
     "runtime-main.js.map": "/movies-and-vegetables-homepage/static/js/runtime-main.668dfbe0.js.map",
     "static/js/2.41d6f14b.chunk.js": "/movies-and-vegetables-homepage/static/js/2.41d6f14b.chunk.js",
     "static/js/2.41d6f14b.chunk.js.map": "/movies-and-vegetables-homepage/static/js/2.41d6f14b.chunk.js.map",
     "index.html": "/movies-and-vegetables-homepage/index.html",
-    "static/css/main.44164620.chunk.css.map": "/movies-and-vegetables-homepage/static/css/main.44164620.chunk.css.map",
+    "static/css/main.1f98c93d.chunk.css.map": "/movies-and-vegetables-homepage/static/css/main.1f98c93d.chunk.css.map",
     "static/js/2.41d6f14b.chunk.js.LICENSE.txt": "/movies-and-vegetables-homepage/static/js/2.41d6f14b.chunk.js.LICENSE.txt",
     "static/media/imdb-sample.0f2313c4.png": "/movies-and-vegetables-homepage/static/media/imdb-sample.0f2313c4.png",
     "static/media/rotten-sample.40c4306a.png": "/movies-and-vegetables-homepage/static/media/rotten-sample.40c4306a.png"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.668dfbe0.js",
     "static/js/2.41d6f14b.chunk.js",
-    "static/css/main.44164620.chunk.css",
-    "static/js/main.2eb30f57.chunk.js"
+    "static/css/main.1f98c93d.chunk.css",
+    "static/js/main.fb0c30e2.chunk.js"
   ]
 }
