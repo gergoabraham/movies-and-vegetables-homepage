@@ -14,8 +14,3 @@
   height: 100%;
   align-items: center;
 }
-
-.features__pages-container__page div,
-.features__pages-container__page h3 {
-  flex: 1;
-}

@@ -1,13 +1,12 @@
-import FloatIn from '../FloatInAnimation/FloatIn';
-import ImagePart from '../ImagePart/ImagePart';
-
 import './Features.css';
 
 import imdbSample from '../Images/imdb-sample.png';
 import rottenSample from '../Images/rotten-sample.png';
+import FloatIn from '../FloatInAnimation/FloatIn';
+import ImagePartHighlight from '../ImagePartHighlight/ImagePartHighlight';
 
 function Features({ className }) {
-  const imdbImage = { url: imdbSample, width: 669, height: 801 };
+  const imdbImage = { url: imdbSample, width: 668, height: 794 };
   const rottenImage = { url: rottenSample, width: 524, height: 568 };
 
   return (
@@ -22,53 +21,63 @@ function Features({ className }) {
         <div className="features__pages-container__page">
           <h3>on IMDb</h3>
 
-          <ImagePart
+          <ImagePartHighlight
             image={imdbImage}
-            part={{ width: 288, height: 45, top: 49, left: 372 }}
-          >
-            Audience Score
-          </ImagePart>
-
-          <ImagePart
-            image={imdbImage}
-            part={{ width: 337, height: 37, top: 598, left: 13 }}
-          >
-            Tomatometer
-          </ImagePart>
-
-          <ImagePart
-            image={imdbImage}
-            part={{ width: 300, height: 58, top: 643, left: 13 }}
-          >
-            Critics Consensus
-          </ImagePart>
+            parts={[
+              {
+                width: 174,
+                height: 38,
+                left: 178,
+                top: 596,
+                name: 'Tomatometer',
+              },
+              {
+                width: 94,
+                height: 46,
+                left: 480,
+                top: 48,
+                name: 'Audience Score',
+              },
+              {
+                width: 630,
+                height: 57,
+                left: 13,
+                top: 643,
+                name: 'Critics Consensus',
+              },
+            ]}
+          ></ImagePartHighlight>
         </div>
 
         <div className="features__pages-container__page">
           <h3>on RottenTomatoes</h3>
 
-          <ImagePart
+          <ImagePartHighlight
             image={rottenImage}
-            part={{ width: 164, height: 113, left: 268, top: 302 }}
-          >
-            IMDb Rating
-            <br />
-            (including Toplist Position)
-          </ImagePart>
-
-          <ImagePart
-            image={rottenImage}
-            part={{ width: 124, height: 113, left: 132, top: 302 }}
-          >
-            Metascore
-          </ImagePart>
-
-          <ImagePart
-            image={rottenImage}
-            part={{ width: 169, height: 72, left: 179, top: 417 }}
-          >
-            Summary
-          </ImagePart>
+            parts={[
+              {
+                width: 164,
+                height: 113,
+                left: 268,
+                top: 302,
+                name: 'IMDb Rating',
+              },
+              {
+                width: 124,
+                height: 113,
+                left: 132,
+                top: 302,
+                name: 'Metascore',
+              },
+              {
+                width: 490,
+                height: 73,
+                left: 18,
+                top: 423,
+                name: 'Plot summary',
+              },
+            ]}
+          ></ImagePartHighlight>
         </div>
       </div>
 
