@@ -21,33 +21,29 @@ function Features({ className }) {
   ];
 
   return (
-    <div className={'features ' + className}>
-      <FloatIn>
-        <h2>What does it do?</h2>
-      </FloatIn>
+    <FloatIn className={'features ' + className}>
+      <h2>What does it do?</h2>
 
       <h3>Shows you the scores.</h3>
 
-      <div className="features__pages-container">
-        <div className="features__pages-container__page">
-          <h3>on IMDb</h3>
+      <div className="features__page">
+        <h3>on IMDb</h3>
 
-          <ImagePartHighlight
-            image={imdbImage}
-            highlights={imdbHighlights}
-          ></ImagePartHighlight>
-        </div>
-
-        <div className="features__pages-container__page">
-          <h3>on RottenTomatoes</h3>
-
-          <ImagePartHighlight
-            image={rottenImage}
-            highlights={rottenHighlights}
-          ></ImagePartHighlight>
-        </div>
+        <ImagePartHighlight
+          image={imdbImage}
+          highlights={imdbHighlights}
+        ></ImagePartHighlight>
       </div>
-    </div>
+
+      <div className="features__page">
+        <h3>on RottenTomatoes</h3>
+
+        <ImagePartHighlight
+          image={rottenImage}
+          highlights={rottenHighlights}
+        ></ImagePartHighlight>
+      </div>
+    </FloatIn>
   );
 }
 

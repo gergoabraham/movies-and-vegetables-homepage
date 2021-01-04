@@ -1,4 +1,4 @@
-.features__pages-container {
+.features {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -7,10 +7,14 @@
   padding: 2rem 5rem;
 }
 
-.features__pages-container__page {
+.features h2,
+.features h3 {
+  width: 100%;
+}
+
+.features__page {
   flex-basis: 30%;
   display: flex;
   flex-direction: column;
-  height: 100%;
   align-items: center;
 }

@@ -6,7 +6,7 @@
 
 .float-in-hidden {
   opacity: 0;
-  transform: translateY(50%);
+  transform: translateY(10%);
 }
 
 .float-in-delay-0 {

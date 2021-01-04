@@ -32,6 +32,7 @@ function FloatIn({ children, className, startingDelay = 0, customDelays }) {
     <ReactVisibilitySensor
       ref={sensor}
       partialVisibility={doesGroupFitInWindow}
+      minTopValue="300"
       onChange={visibilityChangeHandler}
     >
       <div className={className}>

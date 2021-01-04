@@ -5,6 +5,10 @@
   justify-content: center;
 }
 
+.introduction__list h2 {
+  width: 100%;
+}
+
 .introduction__list__item {
   padding: 1rem 2rem;
 
