@@ -7,7 +7,18 @@ import ImagePartHighlight from '../ImagePartHighlight/ImagePartHighlight';
 
 function Features({ className }) {
   const imdbImage = { url: imdbSample, width: 668, height: 794 };
+  const imdbHighlights = [
+    { name: 'Audience Score', width: 94, height: 46, left: 480, top: 48 },
+    { name: 'Tomatometer', width: 174, height: 38, left: 178, top: 596 },
+    { name: 'Critics Consensus', width: 630, height: 57, left: 13, top: 643 },
+  ];
+
   const rottenImage = { url: rottenSample, width: 524, height: 568 };
+  const rottenHighlights = [
+    { name: 'Metascore', width: 124, height: 113, left: 132, top: 302 },
+    { name: 'IMDb Rating', width: 164, height: 113, left: 268, top: 302 },
+    { name: 'Plot summary', width: 490, height: 73, left: 18, top: 423 },
+  ];
 
   return (
     <div className={'features ' + className}>
@@ -23,29 +34,7 @@ function Features({ className }) {
 
           <ImagePartHighlight
             image={imdbImage}
-            parts={[
-              {
-                width: 94,
-                height: 46,
-                left: 480,
-                top: 48,
-                name: 'Audience Score',
-              },
-              {
-                width: 174,
-                height: 38,
-                left: 178,
-                top: 596,
-                name: 'Tomatometer',
-              },
-              {
-                width: 630,
-                height: 57,
-                left: 13,
-                top: 643,
-                name: 'Critics Consensus',
-              },
-            ]}
+            highlights={imdbHighlights}
           ></ImagePartHighlight>
         </div>
 
@@ -54,29 +43,7 @@ function Features({ className }) {
 
           <ImagePartHighlight
             image={rottenImage}
-            parts={[
-              {
-                width: 124,
-                height: 113,
-                left: 132,
-                top: 302,
-                name: 'Metascore',
-              },
-              {
-                width: 164,
-                height: 113,
-                left: 268,
-                top: 302,
-                name: 'IMDb Rating',
-              },
-              {
-                width: 490,
-                height: 73,
-                left: 18,
-                top: 423,
-                name: 'Plot summary',
-              },
-            ]}
+            highlights={rottenHighlights}
           ></ImagePartHighlight>
         </div>
       </div>

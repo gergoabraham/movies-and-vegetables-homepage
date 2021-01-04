@@ -4,7 +4,7 @@ import './ImagePartHighlight.css';
 
 function ImagePartHighlight({
   image = { url: '', width: 0, height: 0 },
-  parts = [{ top: 0, left: 0, width: 0, height: 0, name: '' }],
+  highlights = [{ top: 0, left: 0, width: 0, height: 0, name: '' }],
 }) {
   const [resizeFactor, setResizeFactor] = useState(1);
   const [highlightIndex, setHighlightIndex] = useState(0);
@@ -23,7 +23,7 @@ function ImagePartHighlight({
   }, [image.width]);
 
   const proceedWithHighlightIndex = () => {
-    setHighlightIndex((i) => (i < parts.length - 1 ? i + 1 : 0));
+    setHighlightIndex((i) => (i < highlights.length - 1 ? i + 1 : 0));
   };
 
   const onMouseEnterHandler = () => {
@@ -59,7 +59,7 @@ function ImagePartHighlight({
     const y2 =
       (event.clientY - ref.current.offsetTop + window.scrollY) / resizeFactor;
 
-    const smallestDistancesFromRectangles = parts.map((rect) => {
+    const smallestDistancesFromRectangles = highlights.map((rect) => {
       const x1 = Math.min(Math.max(x2, rect.left), rect.left + rect.width);
       const y1 = Math.min(Math.max(y2, rect.top), rect.top + rect.height);
 
@@ -75,7 +75,7 @@ function ImagePartHighlight({
     setHighlightIndex(minDistanceIndex);
   };
 
-  const part = parts[highlightIndex];
+  const part = highlights[highlightIndex];
 
   return (
     <div
@@ -116,7 +116,7 @@ function ImagePartHighlight({
         }}
       ></div>
 
-      {isMouseIn && (
+      {isMouseIn && part.name && (
         <div
           className="image-part-highlight-legend"
           style={{
