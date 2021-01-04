@@ -14,8 +14,7 @@
   position: absolute;
   box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
   border-radius: 0.5rem;
-  transition-duration: 500ms;
-  transition-timing-function: ease;
+  transition: all 500ms ease, filter 300ms ease;
 }
 
 .image-part-highlight-legend {
