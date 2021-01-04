@@ -1,8 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 function FloatInItem({ isGroupVisible, children: item, delay }) {
   const [isTransitionDone, setIsTransitionDone] = useState(false);
-  const itemRef = useRef();
 
   const itemDelay = Math.min(parseInt(delay), 7);
 
@@ -12,13 +11,12 @@ function FloatInItem({ isGroupVisible, children: item, delay }) {
     (!isGroupVisible ? ' float-in-hidden' : '');
 
   const onTransitionEndHandler = (event) => {
-    if (event.target === itemRef.current) {
+    if (event.target.classList.contains('float-in')) {
       setIsTransitionDone(true);
     }
   };
 
   const itemProps = {
-    ref: itemRef,
     className: floatInClassName,
     onTransitionEnd: !isTransitionDone ? onTransitionEndHandler : null,
   };
