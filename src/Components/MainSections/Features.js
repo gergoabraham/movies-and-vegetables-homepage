@@ -24,7 +24,7 @@ function Features({ className }) {
     <FloatIn className={'features ' + className}>
       <h2>What does it do?</h2>
 
-      <h3>Shows you the scores.</h3>
+      <h3>Shows you the scores from the other site.</h3>
 
       <div className="features__page">
         <h3>on IMDb</h3>
