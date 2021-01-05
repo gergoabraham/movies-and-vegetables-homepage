@@ -4,7 +4,13 @@ import ReactVisibilitySensor from 'react-visibility-sensor';
 import FloatInItem from './FloatInItem';
 import './FloatIn.css';
 
-function FloatIn({ children, className, startingDelay = 0, customDelays }) {
+function FloatIn({
+  children,
+  className,
+  startingDelay = 0,
+  customDelays,
+  slow = false,
+}) {
   if (customDelays && customDelays.length !== children.length) {
     throw new Error(
       'FloatIn "customDelays" property\'s length should equal to the number of children.'
@@ -40,6 +46,7 @@ function FloatIn({ children, className, startingDelay = 0, customDelays }) {
           <FloatInItem
             isGroupVisible={isGroupVisible}
             delay={customDelays ? customDelays[i] : i + Number(startingDelay)}
+            slow={slow}
           >
             {item}
           </FloatInItem>

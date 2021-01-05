@@ -1,6 +1,14 @@
-.float-in {
+.float-in,
+.float-in-slow {
   transition-duration: 800ms;
   transition-timing-function: ease;
+}
+
+.float-in {
+  --transition-delay: 300ms;
+}
+
+.float-in-slow {
   --transition-delay: 800ms;
 }
 
