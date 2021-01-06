@@ -5,16 +5,16 @@
 }
 
 .float-in {
-  --transition-delay: 300ms;
+  --transition-delay: 150ms;
 }
 
 .float-in-slow {
-  --transition-delay: 800ms;
+  --transition-delay: 600ms;
 }
 
 .float-in-hidden {
   opacity: 0;
-  transform: translateY(10%);
+  transform: translateY(0.5rem);
 }
 
 .float-in-delay-0 {
