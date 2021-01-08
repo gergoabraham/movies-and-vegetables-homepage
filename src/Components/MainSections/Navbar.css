@@ -12,20 +12,6 @@
   box-shadow: 0px 0px 0.5rem #888888;
 }
 
-.navbar button {
-  width: 6rem;
-  height: 1.5rem;
-
-  background: linear-gradient(
-    -45deg,
-    var(--primary-color-a),
-    var(--primary-color-b)
-  );
-  border: 0;
-  border-radius: 0.2rem;
-  box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.25);
-}
-
 .navbar-enter,
 .navbar-exit-active {
   transform: translateY(-150%);

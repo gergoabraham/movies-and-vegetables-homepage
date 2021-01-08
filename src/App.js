@@ -8,6 +8,7 @@ import Introduction from './Components/MainSections/Introduction';
 import Features from './Components/MainSections/Features';
 import Downloads from './Components/MainSections/Downloads';
 import Alert from './Components/MainSections/Alert';
+import Changelog from './Components/MainSections/Changelog';
 
 import './App.css';
 
@@ -39,6 +40,7 @@ function App() {
       <Introduction className="section dark-theme" />
       <Features className="section light-theme" />
       <Downloads className="section dark-theme" />
+      <Changelog className="section light-theme" />
     </div>
   );
 }

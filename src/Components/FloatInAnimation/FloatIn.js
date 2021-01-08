@@ -24,15 +24,17 @@ function FloatIn({
   const visibilityChangeHandler = (isGroupVisible) =>
     isGroupVisible && setIsGroupVisible(true);
 
-  useEffect(() => {
-    const windowResizeHandler = () =>
-      setIfGroupFitsInWindow(
-        sensor.current.node.getBoundingClientRect().height > window.innerHeight
-      );
+  const windowResizeHandler = () =>
+    setIfGroupFitsInWindow(
+      sensor.current.node.getBoundingClientRect().height > window.innerHeight
+    );
 
+  useEffect(() => {
     windowResizeHandler();
     window.addEventListener('resize', windowResizeHandler);
   }, [sensor]);
+
+  useEffect(() => windowResizeHandler(), [children]);
 
   return (
     <ReactVisibilitySensor
