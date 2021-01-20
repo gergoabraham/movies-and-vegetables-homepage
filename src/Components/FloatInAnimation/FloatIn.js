@@ -25,6 +25,7 @@ function FloatIn({
     isGroupVisible && setIsGroupVisible(true);
 
   const windowResizeHandler = () =>
+    sensor &&
     setIfGroupFitsInWindow(
       sensor.current.node.getBoundingClientRect().height > window.innerHeight
     );
