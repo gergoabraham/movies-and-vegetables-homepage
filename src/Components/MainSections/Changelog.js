@@ -33,13 +33,26 @@ function Changelog({ className }) {
     fetchChangelog();
   }, [url]);
 
+  const getVersionType = (version) => {
+    if (version.match(/0\.0$/)) {
+      return 'major';
+    } else if (version.match(/\.0$/)) {
+      return 'minor';
+    } else {
+      return 'patch';
+    }
+  };
+
   return (
     <FloatIn className={`changelog ${className || ''}`}>
       <h2>Changelog</h2>
 
       {changelog ? (
         changelog.map((change, i) => (
-          <div className="changelog-item" key={i}>
+          <div
+            key={i}
+            className={'changelog-item ' + getVersionType(change.version)}
+          >
             <div className="changelog-version">{change.version}</div>
             <div className="changelog-date">{change.date}</div>
             <div className="changelog-description">

@@ -33,31 +33,41 @@
   height: 100%;
 }
 
-.changelog-item:first-of-type:before {
+.changelog-item:first-of-type::before {
   top: calc(var(--changelog-top-bottom-padding) + 0.5rem);
   height: calc(100% - 1rem);
 }
 
-.changelog-item:last-of-type:before {
+.changelog-item:last-of-type::before {
   height: calc(var(--changelog-top-bottom-padding) + 0.5rem);
 }
 
 /* --- Points for the timeline --- */
-.changelog-item::after {
-  border: 2px solid gray;
-  background-color: white;
-  content: ' ';
-  position: absolute;
-  left: -1.5rem;
-  top: calc(var(--changelog-top-bottom-padding) + 0.2rem);
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  transition-duration: 300ms;
+.major {
+  --size: 1.6rem;
+  --color: gray;
 }
 
-.changelog-item:first-of-type:after {
-  background-color: var(--primary-color-a);
+.minor {
+  --size: 1.4rem;
+  --color: lightgray;
+}
+
+.patch {
+  --size: 0.8rem;
+  --color: lightgray;
+}
+
+.changelog-item::after {
+  background-color: var(--color);
+  content: ' ';
+  position: absolute;
+  left: calc(-1rem + 2px - var(--size) / 2);
+  top: calc(var(--changelog-top-bottom-padding) + 0.8rem - var(--size) / 2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  transition-duration: 300ms;
 }
 
 .changelog-item:hover::after {
