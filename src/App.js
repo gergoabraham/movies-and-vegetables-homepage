@@ -33,6 +33,11 @@ function App() {
       </VisibilitySensor>
 
       <Alert>
+        NOT WORKING: Movies and Vegetables doesn't work currently, because the
+        RottenTomatoes site has a new design since 2nd February. But it will
+        work in a few days again!
+      </Alert>
+      <Alert>
         IMDb is releasing a new version of the Title Page. It is currently
         unsupported by Movies and Vegetables, but will be soon. Stay tuned. =)
       </Alert>
