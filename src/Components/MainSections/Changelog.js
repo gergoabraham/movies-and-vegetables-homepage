@@ -7,7 +7,8 @@ function Changelog({ className }) {
   const [changelog, setChangelog] = useState(null);
   const [fetchError, setFetchError] = useState(false);
 
-  const url = 'https://gergooo.github.io/MoviesAndVegetables/changelog.json';
+  const url =
+    'https://gergoabraham.github.io/MoviesAndVegetables/changelog.json';
 
   const fetchChangelog = async () => {
     try {
