@@ -32,18 +32,9 @@ function App() {
         <Header className="light-theme" />
       </VisibilitySensor>
 
-      <Alert>
-        NOT WORKING: Movies and Vegetables doesn't work currently, because the
-        RottenTomatoes site has a new design since 2nd February. But it will
-        work in a few days again!
-      </Alert>
-      <Alert>
-        IMDb is releasing a new version of the Title Page. It is currently
-        unsupported by Movies and Vegetables, but will be soon. Stay tuned. =)
-      </Alert>
-
       <Introduction className="section dark-theme" />
       <Features className="section light-theme" />
+      <Alert>At the moment it works only on IMDb.</Alert>
       <Downloads className="section dark-theme" />
       <Changelog className="section light-theme" />
     </div>
