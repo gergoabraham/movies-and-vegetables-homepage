@@ -6,11 +6,11 @@ import FloatIn from '../FloatInAnimation/FloatIn';
 import ImagePartHighlight from '../ImagePartHighlight/ImagePartHighlight';
 
 function Features({ className }) {
-  const imdbImage = { url: imdbSample, width: 668, height: 794 };
+  const imdbImage = { url: imdbSample, width: 1275, height: 925 };
   const imdbHighlights = [
-    { name: 'Audience Score', width: 94, height: 46, left: 480, top: 48 },
-    { name: 'Tomatometer', width: 174, height: 38, left: 178, top: 596 },
-    { name: 'Critics Consensus', width: 630, height: 57, left: 13, top: 643 },
+    { name: 'Audience Score', width: 156, height: 82, left: 719, top: 20 },
+    { name: 'Tomatometer', width: 136, height: 82, left: 875, top: 20 },
+    { name: 'Critics Consensus', width: 440, height: 72, left: 812, top: 709 },
   ];
 
   const rottenImage = { url: rottenSample, width: 524, height: 568 };
