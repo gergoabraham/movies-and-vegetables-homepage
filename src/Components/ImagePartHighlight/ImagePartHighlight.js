@@ -3,10 +3,10 @@ import { useState, useEffect, useRef } from 'react';
 import './ImagePartHighlight.css';
 
 function ImagePartHighlight({
-  image = { url: '', width: 0, height: 0 },
+  image = { url: '', width: 0, height: 0, scale: 1 },
   highlights = [{ top: 0, left: 0, width: 0, height: 0, name: '' }],
 }) {
-  const [resizeFactor, setResizeFactor] = useState(1);
+  const [resizeFactor, setResizeFactor] = useState(image.scale ?? 1);
   const [highlightIndex, setHighlightIndex] = useState(0);
   const [intervalCallbackId, setIntervalCallbackId] = useState(null);
   const [isMouseIn, setIsMouseIn] = useState(false);
@@ -14,13 +14,19 @@ function ImagePartHighlight({
 
   useEffect(() => {
     const windowResizeHandler = () => {
-      const maxWidthPx = Math.min(window.innerWidth * 0.9, image.width);
+      const maxWidthByWindowPx = Math.min(window.innerWidth * 0.9, image.width);
+      const maxWidthByScale = image.width * (image.scale ?? 1);
+
+      const maxWidthPx = Math.min(maxWidthByWindowPx, maxWidthByScale);
+      console.log('running with ', image.scale);
       setResizeFactor(maxWidthPx / image.width);
     };
 
     windowResizeHandler();
     window.addEventListener('resize', windowResizeHandler);
-  }, [image.width]);
+
+    return () => window.removeEventListener('resize', windowResizeHandler);
+  }, [image.scale, image.width]);
 
   const proceedWithHighlightIndex = () => {
     setHighlightIndex((i) => (i < highlights.length - 1 ? i + 1 : 0));
